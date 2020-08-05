@@ -72,7 +72,10 @@ namespace FirebaseConnect
 
             if(MyUser.loginCheck(resUser, curUser) == true)
             {
-                MessageBox.Show("Login Successed!!");
+                //MessageBox.Show("Login Successed!!");
+                MainFrm mainfrm = new MainFrm(resUser.Fullname);
+                this.Hide();
+                mainfrm.Show();
             }
             else
             {
